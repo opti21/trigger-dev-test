@@ -1,0 +1,22 @@
+{
+  "services": [
+    {
+      "type": "web",
+      "name": "trigger-v2-railway-demo",
+      "image": "ghcr.io/triggerdotdev/trigger.dev:latest",
+      "env": {
+        "REMIX_APP_PORT": "3030"
+      },
+      "http": {
+        "port": 3030,
+        "healthCheck": {
+          "type": "http",
+          "path": "/healthcheck",
+          "interval": "15s",
+          "timeout": "10s"
+        }
+      }
+    }
+  ]
+}
+
